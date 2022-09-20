@@ -35,3 +35,46 @@ print(number * RATE);
 
 #number変数に違う値を再代入
 number = 2000;
+
+
+#文字列
+# print('I\'m in japan');
+# print("I'm in japan");
+
+#改行
+print("I'm \nin \njapan");
+print("""I'm 
+in 
+japan""");
+
+#先頭を備えて書きたい場合
+#文末に \ をつければその行の改行は無視される
+print("""\
+I'm 
+in 
+japan""");
+
+#文字列 + 文字列
+#print("masaki" " " "suda"); #masaki suda
+#print("masaki" + " " + "suda"); #masaki suda
+#print("@" * 10);
+
+fname = "masaki"
+lname = "suda"
+# print("name: " +  fname + " "+ lname);
+
+
+#文字列に値を埋め込む
+age = 29
+#print("I'm " + fname + " " + lname + ", " + str(age) + " years old!");
+#見づらいからこういう場合はformat()という　命令が使える。
+
+#format()命令
+#format()命令を使うと埋め込まれるときに自動的に文字列型に変換されるから、こっちで strを使う必要はない！
+#print("I'm {} {}, {} years old!".format(fname, lname, age));
+
+#Pythonの 3.6から f文字列というもう少し短く書く記法も用意されている。
+#最近だとほとんどの場合、f文字列を使う。
+print(f"I'm {fname} {lname}, {age} years old!");
+
+
