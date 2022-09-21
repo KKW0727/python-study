@@ -78,3 +78,15 @@ age = 29
 print(f"I'm {fname} {lname}, {age} years old!");
 
 
+
+#ユーザーから入力を受け取る
+num = input("number?")
+print(num * 2) #2を入力した時は4じゃなくて22になる
+#inputで受け取る値は必ず文字列になるという仕様になっているから！
+#だから必要に応じてデータ型を適宜変換する必要がある。
+
+#整数
+print(int(num) * 2)
+
+#浮動小数点数
+print(float(num) * 2)
