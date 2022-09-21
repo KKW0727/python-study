@@ -18,12 +18,12 @@ print(10 ** 7) #10000000 / べき乘
 print(10 % 7) #3 / あまりを計算してくれる 
 
 #変数
-number = 1000;
+#number = 1000;
 # = 代入演算子(だいにゅうえんざんし)
-RATE  = 1.2; #定数
+#RATE  = 1.2; #定数
 #値を再代入しない変数はpythonでは慣習的に大文字にする。
 #再代入してはいけない変数のことを定数と呼ぶ。
-print(number * RATE);
+#print(number * RATE);
 
 #ここで1000や1.2という値をリレラル（null値以外の値）と呼ぶ
 
@@ -34,7 +34,7 @@ print(number * RATE);
 #4.大文字小文字は区別される
 
 #number変数に違う値を再代入
-number = 2000;
+#number = 2000;
 
 
 #文字列
@@ -80,13 +80,29 @@ print(f"I'm {fname} {lname}, {age} years old!");
 
 
 #ユーザーから入力を受け取る
-num = input("number?")
-print(num * 2) #2を入力した時は4じゃなくて22になる
+#num = input("number?")
+#print(num * 2) #2を入力した時は4じゃなくて22になる / 2を2回繰り返すという意味になる
+#+、-、/、%はエラー発生　/ データ型を変換する必要がある
 #inputで受け取る値は必ず文字列になるという仕様になっているから！
 #だから必要に応じてデータ型を適宜変換する必要がある。
 
 #整数
-print(int(num) * 2)
+#print(int(num) * 2) #4
 
 #浮動小数点数
-print(float(num) * 2)
+#print(float(num) * 2)#4.0
+
+
+#f文字列のオプションを使う
+
+number = int(input("number?"));
+RATE = 1.5
+
+#inputで受け取る値は必ず文字列になるからここでエラーが発生！
+print(type(number));
+
+#値のあとの : のあとにオプションを並べることができる
+print(f"2019: {number * RATE:,.1f}")
+print(f"2020: {number * RATE * RATE:,.2f}")
+print(f"2021: {number * RATE * RATE * RATE:,.3f}")
+
