@@ -9,6 +9,9 @@
 #print(1.23e4) #12300 / 1.23に4乘（じょう）をかけたもの
 #print(1.23e-4) #0.000123 / 1.23に-4乘（じょう）をかけたもの
 
+from unittest import result
+
+
 print(10 + 3) #13 / 足し算
 print(10 * 5) #50 / 掛け算
 print(10 - 4) #6 / 引き算
@@ -139,13 +142,22 @@ print(f"I'm {fname} {lname}, {age} years old!");
 #複数の場合分けをする処理
 #場合分けの条件が増えてくると、 elifよりすっきり書ける
 
-signal = input("signal color?")
-match signal:
-    case "red":
-        print("stop")
-    case "yellow": 
-        print("slow")
-    case "blue" | "green":
-        print("go!")
-    case _:
-        print("Invalid signal color...")
+# signal = input("signal color?")
+# match signal:
+#     case "red":
+#         print("stop")
+#     case "yellow": 
+#         print("slow")
+#     case "blue" | "green":
+#         print("go!")
+#     case _:
+#         print("Invalid signal color...")
+
+
+# if...else...を一行で書く
+#文法
+#条件式が真のときに返す値 if 条件式 else 条件式が偽のときに返す値
+input_num = int(input("数字を入力してください。"))
+
+result = "合格" if input_num >= 80 else "不合格"
+print(result)
