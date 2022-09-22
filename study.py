@@ -95,16 +95,16 @@ print(f"I'm {fname} {lname}, {age} years old!");
 
 #f文字列のオプションを使う
 
-number = int(input("number?"));
-RATE = 1.5
+#number = int(input("number?"));
+#RATE = 1.5
 
 #inputで受け取る値は必ず文字列になるからここでエラーが発生！
-print(type(number));
+#print(type(number));
 
 #値のあとの : のあとにオプションを並べることができる
-print(f"2019: {number * RATE:,.1f}")
-print(f"2020: {number * RATE * RATE:,.2f}")
-print(f"2021: {number * RATE * RATE * RATE:,.3f}")
+#print(f"2019: {number * RATE:,.1f}")
+#print(f"2020: {number * RATE * RATE:,.2f}")
+#print(f"2021: {number * RATE * RATE * RATE:,.3f}")
 
 #条件分岐
 #if...elif...else
@@ -122,13 +122,30 @@ print(f"2021: {number * RATE * RATE * RATE:,.3f}")
 # or もしくは
 # not ~ではない
 
-japaneseScore = int(input("japaneseScore?"))
-koreanScore = int(input("koreanScore?"))
-if japaneseScore <= 0 and koreanScore <= 0:
-    print("ERROR")
-elif japaneseScore >= 80 or koreanScore >= 80:
-    print("合格")
-else:
-    print("NG")
-    print("不合格")
+#japaneseScore = int(input("japaneseScore?"))
+#koreanScore = int(input("koreanScore?"))
+# if japaneseScore <= 0 and koreanScore <= 0:
+#     print("ERROR")
+# elif japaneseScore >= 80 or koreanScore >= 80:
+#     print("合格")
+# else:
+#     print("NG")
+#     print("不合格")
 
+
+
+#match
+#python 3.10以降のみに対応
+#複数の場合分けをする処理
+#場合分けの条件が増えてくると、 elifよりすっきり書ける
+
+signal = input("signal color?")
+match signal:
+    case "red":
+        print("stop")
+    case "yellow": 
+        print("slow")
+    case "blue" | "green":
+        print("go!")
+    case _:
+        print("Invalid signal color...")
