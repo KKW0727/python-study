@@ -9,6 +9,7 @@
 #print(1.23e4) #12300 / 1.23に4乘（じょう）をかけたもの
 #print(1.23e-4) #0.000123 / 1.23に-4乘（じょう）をかけたもの
 
+from tkinter.tix import InputOnly
 from unittest import result
 
 
@@ -155,9 +156,30 @@ print(f"I'm {fname} {lname}, {age} years old!");
 
 
 # if...else...を一行で書く
-#文法
+#書き方
 #条件式が真のときに返す値 if 条件式 else 条件式が偽のときに返す値
 input_num = int(input("数字を入力してください。"))
 
-result = "合格" if input_num >= 80 else "不合格"
-print(result)
+# result = "合格" if input_num >= 80 else "不合格"
+# print(result)
+
+
+#matchとifを組み合わせる
+#case >= 90や　case input_num >= 90のように書くことができないからinput_numの値を何らかの変数で受ける
+match input_num:
+    case n if n < 0 or n > 100:
+       print("invalid number")
+    case n if n >= 90:
+        print("A")
+    case n if n >= 80:
+        print("B")
+    case n if n >= 70:
+        print("C")
+    case n if n >= 60:
+        print("D")
+    case _:
+         print("不合格")
+        
+    
+
+
