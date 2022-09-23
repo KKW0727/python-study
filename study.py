@@ -179,6 +179,25 @@ match input_num:
         print("D")
     case _:
          print("不合格")
+
+
+#反復処理
+#for
+for i in range(10): #0から9までの数列のようなものを生成してくれる
+    print(f"{i} Hi python") #i -> 0,1,2,3,4,5,6,7,8,9 #生成された数字を一つずつiに代入しながら10回繰り返す
+ 
+#好きな範囲を作ることもできる
+for i in range(5,9): #5から8
+    print(f"{i} hello python") #i -> 5,6,7,8
+    
+for i in range(1,10,3): #1から 10に満たない数値まで 3刻みで、という意味
+    print(f"{i} good python!") #i -> 1, 4, 7
+    
+#逆順
+for i in range(8,5,-1):
+    print(f"{i} python") #8,7,6
+#最後の数値にマイナス値を指定すると、逆順
+# 8から 5まで 1つずつ逆順に進むけど、5は含まないから、 8, 7, 6 になる
         
     
 
