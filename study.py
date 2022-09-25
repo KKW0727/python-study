@@ -200,7 +200,7 @@ for i in range(8,5,-1):
 # 8から 5まで 1つずつ逆順に進むけど、5は含まないから、 8, 7, 6 になる
         
 
-        
+
 #forの中でforを使う
 for i in range(2,10):
     print(i)
@@ -208,3 +208,27 @@ for i in range(2,10):
         print(f"{i} * {j} = {i * j}")
 
 
+# 反復処理 while
+#for文は回数が決まっている時に使う
+#while文は回数が決まっていない時やすぐにはわからない時に使う
+command = int(input("1: あいみょん, 2:菅田将暉, 3:星野源"))
+select = int(input("1.生年月日, 2.出身, 0.終了"))
+
+while select != 0:
+    if command == 1:
+        if select == 1:
+            print("1995年3月6日")
+        elif select == 2:
+            print("日本 兵庫県 西宮市")
+    if command == 2:
+        if select == 1:
+            print("1993年2月21日")
+        elif select == 2:
+             print("日本 大阪府 箕面市")
+    if command == 3:
+        if select == 1:
+            print("1981年1月28日")
+        elif select == 2:
+            print("日本 埼玉県 蕨市")
+    command = int(input("1: あいみょん, 2:菅田将暉, 3:星野源"))
+    select = int(input("1.生年月日, 2.出身, 0.終了"))
