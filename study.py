@@ -199,6 +199,12 @@ for i in range(8,5,-1):
 #最後の数値にマイナス値を指定すると、逆順
 # 8から 5まで 1つずつ逆順に進むけど、5は含まないから、 8, 7, 6 になる
         
-    
+
+        
+#forの中でforを使う
+for i in range(2,10):
+    print(i)
+    for j in range(1,9):
+        print(f"{i} * {j} = {i * j}")
 
 
