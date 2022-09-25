@@ -211,10 +211,40 @@ for i in range(2,10):
 # 反復処理 while
 #for文は回数が決まっている時に使う
 #while文は回数が決まっていない時やすぐにはわからない時に使う
-command = int(input("1: あいみょん, 2:菅田将暉, 3:星野源"))
-select = int(input("1.生年月日, 2.出身, 0.終了"))
+# command = int(input("1: あいみょん, 2:菅田将暉, 3:星野源"))
+# select = int(input("1.生年月日, 2.出身, 0.終了"))
 
-while select != 0:
+# while select != 0:　#一回も実行されない場合がある
+#     if command == 1:
+#         if select == 1:
+#             print("1995年3月6日")
+#         elif select == 2:
+#             print("日本 兵庫県 西宮市")
+#     if command == 2:
+#         if select == 1:
+#             print("1993年2月21日")
+#         elif select == 2:
+#              print("日本 大阪府 箕面市")
+#     if command == 3:
+#         if select == 1:
+#             print("1981年1月28日")
+#         elif select == 2:
+#             print("日本 埼玉県 蕨市")
+#     command = int(input("1: あいみょん, 2:菅田将暉, 3:星野源"))
+#     select = int(input("1.生年月日, 2.出身, 0.終了"))
+
+
+#　whileをシンプルに書く
+# 常に条件が成立するwhileを使う
+
+#command = None #まだ値が定まっていないという意味で、 Noneという特殊なキーワードを使う
+
+while 1 == 1: #必ず一回は実行される 
+    command = int(input("1. あいみょん, 2.菅田将暉, 3.星野源, 0.終了"))
+    if command == 0:
+        break
+    select = int(input("1.生年月日, 2.出身"))
+    
     if command == 1:
         if select == 1:
             print("1995年3月6日")
@@ -230,5 +260,3 @@ while select != 0:
             print("1981年1月28日")
         elif select == 2:
             print("日本 埼玉県 蕨市")
-    command = int(input("1: あいみょん, 2:菅田将暉, 3:星野源"))
-    select = int(input("1.生年月日, 2.出身, 0.終了"))
