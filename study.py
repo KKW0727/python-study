@@ -239,24 +239,44 @@ for i in range(2,10):
 
 #command = None #まだ値が定まっていないという意味で、 Noneという特殊なキーワードを使う
 
-while 1 == 1: #必ず一回は実行される 
-    command = int(input("1. あいみょん, 2.菅田将暉, 3.星野源, 0.終了"))
-    if command == 0:
-        break
-    select = int(input("1.生年月日, 2.出身"))
+# while 1 == 1: #必ず一回は実行される 
+#     command = int(input("1. あいみょん, 2.菅田将暉, 3.星野源, 0.終了"))
+#     if command == 0:
+#         break
+#     select = int(input("1.生年月日, 2.出身"))
     
-    if command == 1:
-        if select == 1:
-            print("1995年3月6日")
-        elif select == 2:
-            print("日本 兵庫県 西宮市")
-    if command == 2:
-        if select == 1:
-            print("1993年2月21日")
-        elif select == 2:
-             print("日本 大阪府 箕面市")
-    if command == 3:
-        if select == 1:
-            print("1981年1月28日")
-        elif select == 2:
-            print("日本 埼玉県 蕨市")
+#     if command == 1:
+#         if select == 1:
+#             print("1995年3月6日")
+#         elif select == 2:
+#             print("日本 兵庫県 西宮市")
+#     if command == 2:
+#         if select == 1:
+#             print("1993年2月21日")
+#         elif select == 2:
+#              print("日本 大阪府 箕面市")
+#     if command == 3:
+#         if select == 1:
+#             print("1981年1月28日")
+#         elif select == 2:
+#             print("日本 埼玉県 蕨市")
+
+
+#break、continue
+#breakは反復処理自体から抜ける、contiuneはそれ以降の処理をスキップして次の反復処理に移る
+#for文の中でも使うことができる。
+while 1 == 1:
+    command = int(input("Select 1, 2, 3 (0: Exit) "))
+    match command:
+        case 1:
+            print("ラーメン")
+        case 2:
+            print("寿司")
+        case 3:
+            print("たこ焼き")
+        case 0:
+            break #while文から完全に抜ける
+        case _:
+            print("Invalid command, try again")
+            continue #これ以降の処理をスキップして次の反復処理を実行
+    print("menu processed correctly")
