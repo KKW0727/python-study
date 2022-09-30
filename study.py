@@ -280,3 +280,13 @@ while 1 == 1:
             print("Invalid command, try again")
             continue #これ以降の処理をスキップして次の反復処理を実行
     print("menu processed correctly")
+
+
+
+#真偽値
+#真偽値には条件が成立していることを表す Trueと、成立していないことを表す Falseしかない。
+#True と False の最初の1文字は必ず、大文字!
+#False 0 0.0 '' None
+#True それ以外の値
+#while 1 == 1　と　while 1+4 と　while True は同じ意味！
+#while ''とするとの処理が実行されずに、すぐに終了する。
