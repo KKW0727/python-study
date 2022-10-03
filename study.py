@@ -290,3 +290,9 @@ while 1 == 1:
 #True それ以外の値
 #while 1 == 1　と　while 1+4 と　while True は同じ意味！
 #while ''とするとの処理が実行されずに、すぐに終了する。
+
+
+
+#エラーメッセージ
+#SyntaxError / 構文のルールを守っていないときに発生
+#IndentationError / 字下げがされていない時に発生
