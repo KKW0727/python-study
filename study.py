@@ -296,3 +296,32 @@ while 1 == 1:
 #エラーメッセージ
 #SyntaxError / 構文のルールを守っていないときに発生
 #IndentationError / 字下げがされていない時に発生
+
+
+#主な例外
+
+#例外 / プログラムは起動するけど、実行中に検出されるエラー
+#NameError /変数名などを間違えた時に発生
+#TypeError / データ型が正しくないときに発生
+#ValueError / 命令に渡す値を間違えている場合に発生
+
+
+#try ... except ... で例外を処理
+#コンパイル時点ではわからなかったが、実行時にエラーが発生するかもしれないから安全なプログラムを作るために例外処理が必要
+#例外処理が適切に実装できていないと、異常が発生した箇所の特定ができず対策に時間がかかってしまう
+#だからわかりやすいメッセージを表示して終了させる必要がある
+
+try:
+    input = int(input("好きな数字を入力してください "))
+except ValueError:
+        print("Invalid input")
+        exit()  #Pythonでプログラムを終了させるキーワード exit
+        
+print("aimyon")
+RATE = 1.1
+for i in range(3):
+    print(i)
+
+#1. 正しい数字を入力された時　　→ except ValueErrorは無視されて　aimyon 0 1 2が表示される
+#2. int型ではないデータが入った時　(exitがない時)→  except ValueError(例外)が実行されて　 Invalid input aimyon　0 1 2が表示される
+#3. int型ではないデータが入った時　(exitがある時)→  except ValueError(例外)が実行されて　 Invalid inputが表示される
