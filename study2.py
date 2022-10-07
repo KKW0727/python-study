@@ -44,3 +44,22 @@ def show_time(h,m,s=0,ms=0): # sとmsを指定しなかったら0にする
 
 show_time(11,12,0,111)
 show_time(4,34,2,56)
+
+
+#関数で処理をまとめる
+#わかりやすい関数名で全体の処理をまとめて、コードの見通しをよくする
+def show_baseballPlayer():
+    print("鈴木一朗")
+    print("大谷翔平")
+    
+def show_actor():
+    print("綾野剛")
+    print("高橋一生")
+    
+def show_singer():
+    print("aimyon")
+    print("星野源")
+    
+show_baseballPlayer()
+show_actor()
+show_singer()
