@@ -129,3 +129,11 @@ print(double(10)) #20
 
 twice = double #処理の内容、そのものを表す
 print(twice(20)) #40
+
+
+
+#関数を引数として渡す
+def calc(n, function):
+    return function(n) #return double(19)と同じ意味
+    
+print(calc(19, double)) #38 / dobuleの処理、そのものを渡したいからdoubleに()はつけない
