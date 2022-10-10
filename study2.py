@@ -137,3 +137,19 @@ def calc(n, function):
     return function(n) #return double(19)と同じ意味
     
 print(calc(19, double)) #38 / dobuleの処理、そのものを渡したいからdoubleに()はつけない
+
+
+
+#lambdaで無名関数を作る
+#lambda というキーワードを使えば、一行で書けるような処理の関数をその場でさらりと書ける
+def calc(n, func):
+    # return double(10)
+    return func(n)
+
+# def double(n):
+#     return n * 2 #このように一行で書ける処理を単にreturn しているだけだった場合関数をわざわざ定義しなくてもいい
+
+#lambda
+#書き方 / lambda 仮引数: returnの後の処理
+print(calc(10, lambda n: n * 2)) #20
+#doubleという関数名をつけなくていいから、こうした関数の表現を無名関数と呼ぶ
