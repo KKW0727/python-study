@@ -42,7 +42,7 @@
 
 
 #リストから要素を削除する
-scores = [10, 20, 30, 20, 40]
+#scores = [10, 20, 30, 20, 40]
 #clear()を使う
 #scores.clear() #[] / すべての要素を削除して、空にする
 
@@ -51,7 +51,7 @@ scores = [10, 20, 30, 20, 40]
 # 20 の値が複数あった場合、最初の 1 つだけが削除される
 
 #pop()を使う
-poped_item = scores.pop(2) #インデックスを指定して、要素を削除
+#poped_item = scores.pop(2) #インデックスを指定して、要素を削除
 #poped_item = scores.pop()#pop()の引数を省略すれば、末尾の要素を指定したことになる。
 
 #del()を使う
@@ -59,6 +59,29 @@ poped_item = scores.pop(2) #インデックスを指定して、要素を削除
 #でも、削除した要素を取得することができない
 
 #pop()は削除した要素を返してくれる。
-print(poped_item) # 30 / インデックスが 2 であった 30 の要素が削除される
+#print(poped_item) # 30 / インデックスが 2 であった 30 の要素が削除される
 
-print(scores)
+#print(scores)
+
+
+
+#リストのデータを集計してみる
+scores = [10, 20, 30, 20, 40]
+# len()は他のデータ型でも使えるので、メソッドではなくて関数の書き方
+print(len(scores)) #5 /要素数
+print(min(scores)) #10 /最小値(さいしょうち)
+print(max(scores)) #40 /最大値(さいだいち)
+print(sum(scores)) #120 / 合計
+
+#特定の値がリストの中にいくつあるかを調べる方法
+#countメソッドを使う
+print(scores.count(20)) #2
+
+#特定の値がどのインデックスの位置にあるかを調べる方法
+#indexメソッドを使う
+print(scores.index(20)) #1
+
+#特定の値がそのリストに存在するかを調べる方法
+#inを使う
+print(30 in scores) #True / inは真偽値を返す
+print(90 in scores) #False
