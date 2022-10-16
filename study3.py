@@ -66,22 +66,44 @@
 
 
 #リストのデータを集計してみる
-scores = [10, 20, 30, 20, 40]
-# len()は他のデータ型でも使えるので、メソッドではなくて関数の書き方
-print(len(scores)) #5 /要素数
-print(min(scores)) #10 /最小値(さいしょうち)
-print(max(scores)) #40 /最大値(さいだいち)
-print(sum(scores)) #120 / 合計
+# scores = [10, 20, 30, 20, 40]
+# # len()は他のデータ型でも使えるので、メソッドではなくて関数の書き方
+# print(len(scores)) #5 /要素数
+# print(min(scores)) #10 /最小値(さいしょうち)
+# print(max(scores)) #40 /最大値(さいだいち)
+# print(sum(scores)) #120 / 合計
 
 #特定の値がリストの中にいくつあるかを調べる方法
 #countメソッドを使う
-print(scores.count(20)) #2
+# print(scores.count(20)) #2
 
-#特定の値がどのインデックスの位置にあるかを調べる方法
-#indexメソッドを使う
-print(scores.index(20)) #1
+# #特定の値がどのインデックスの位置にあるかを調べる方法
+# #indexメソッドを使う
+# print(scores.index(20)) #1
 
-#特定の値がそのリストに存在するかを調べる方法
-#inを使う
-print(30 in scores) #True / inは真偽値を返す
-print(90 in scores) #False
+# #特定の値がそのリストに存在するかを調べる方法
+# #inを使う
+# print(30 in scores) #True / inは真偽値を返す
+# print(90 in scores) #False
+
+
+
+ #リストの要素を並び替える
+scores = [10, 20, 30, 20, 40]
+
+##要素の並び順を逆にしてくれる。
+#scores.reverse() / 破壊的(元データを直接変更する)
+
+#scores.sort() #値の小さい順に並び替えてくれる。
+
+#値が大きい順に並び替えたい場合
+#scores.sort(reverse=True) # sort()に引数を与える
+
+
+#元データを残しておきたい場合
+#元データはそのまま、要素を並び替えた結果を新しいリストとして返してくれるバージョンもある
+scores_sorted = sorted(scores, reverse=True) ##非破壊的(元データを破壊しない処理)
+print(scores) #[10, 20, 30, 20, 40] / 元データはそのまま
+print(scores_sorted)
+
+
