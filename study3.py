@@ -144,3 +144,15 @@ sliced_list = nums[::-1] #非破壊的
 #元リストを変更せずに要素を逆にしたリストを取得できる
 #最後から最初までという意味になって、ちょうどこのリストを逆にしたリスト
 #print(sliced_list) #[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+
+
+#リストとループを組み合わせる
+prices = [100,200,300,400,500]
+
+for price in prices:
+    print(price * 1.3)
+    
+#インデックスを合わせて取得する
+for index, price in enumerate(prices):
+    print(f"{index}: {price * 1.3:.2f}")
