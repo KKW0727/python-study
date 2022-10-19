@@ -148,11 +148,28 @@ sliced_list = nums[::-1] #非破壊的
 
 
 #リストとループを組み合わせる
-prices = [100,200,300,400,500]
+# prices = [100,200,300,400,500]
 
-for price in prices:
-    print(price * 1.3)
+# for price in prices:
+#     print(price * 1.3)
     
-#インデックスを合わせて取得する
-for index, price in enumerate(prices):
-    print(f"{index}: {price * 1.3:.2f}")
+# #インデックスを合わせて取得する
+# for index, price in enumerate(prices):
+#     print(f"{index}: {price * 1.3:.2f}")
+
+
+
+#リスト内包表記を使ってみる
+prices = [100, 200, 150, 200, 100]
+
+#税込価格を要素とする新しいリストを作る
+#tax = []
+# for price in prices:
+#     tax.append(price * 1.3)
+# print(tax)
+
+#もっと簡単に書ける方法
+#実は短い記法が用意されている
+tax = [price * 1.3 for price in prices]
+#こういった書き方はリスト内包表記と呼ばれている
+print(tax)
