@@ -160,16 +160,33 @@ sliced_list = nums[::-1] #非破壊的
 
 
 #リスト内包表記を使ってみる
-prices = [100, 200, 150, 200, 100]
+# prices = [100, 200, 150, 200, 100]
 
-#税込価格を要素とする新しいリストを作る
-#tax = []
-# for price in prices:
-#     tax.append(price * 1.3)
+# #税込価格を要素とする新しいリストを作る
+# #tax = []
+# # for price in prices:
+# #     tax.append(price * 1.3)
+# # print(tax)
+
+# #もっと簡単に書ける方法
+# #実は短い記法が用意されている
+# tax = [price * 1.3 for price in prices]
+# #こういった書き方はリスト内包表記と呼ばれている
 # print(tax)
 
-#もっと簡単に書ける方法
-#実は短い記法が用意されている
-tax = [price * 1.3 for price in prices]
-#こういった書き方はリスト内包表記と呼ばれている
+
+
+
+#リスト内包表記とifを組み合わせる
+# if を加えることで、特定の要素だけを含めたり、特定の要素だけを除外することができる。
+prices = [100, 200, 150, 200, 100]
+#tax =[]
+# for price in prices:
+#     if price != 200:
+#         tax.append(price * 1.3)
+# print(tax)
+
+#remove()を使ってもいいけど、最初に見つかったものしか削除してくれないから、いろいろ面倒!。
+#そこでループ処理と条件分岐を組み合わせる
+tax = [price * 1.3 for price in prices if price != 200]
 print(tax)
