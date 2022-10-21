@@ -190,3 +190,26 @@ prices = [100, 200, 150, 200, 100]
 #そこでループ処理と条件分岐を組み合わせる
 tax = [price * 1.3 for price in prices if price != 200]
 print(tax)
+
+
+
+#タプル(tuple)
+#複数の値をまとめたデータ型
+#in, len(), index(),count() -> 使える
+#append(), insert(), pop() ->使えない(要素を変更することはできない)
+#タプルはいったん生成されたら、この中の要素を変更することができない(リストと違う点)
+
+#aimyon = ("西宮市", 27, 161)
+aimyon = "西宮市", 27, 161
+print(aimyon)
+
+#タプルの各要素はインデックスでアクセスできる
+print(aimyon[0])
+
+#どうしてもタプルの要素を変更したくなった場合、リストに変換してしまえばOK 
+aimyon = list(aimyon)
+print(aimyon)
+
+#変更後にタプルに戻したかったら
+aimyon = tuple(aimyon)
+print(aimyon)
