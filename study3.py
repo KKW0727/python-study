@@ -200,16 +200,43 @@ print(tax)
 #タプルはいったん生成されたら、この中の要素を変更することができない(リストと違う点)
 
 #aimyon = ("西宮市", 27, 161)
+# aimyon = "西宮市", 27, 161
+# print(aimyon)
+
+# #タプルの各要素はインデックスでアクセスできる
+# print(aimyon[0])
+
+# #どうしてもタプルの要素を変更したくなった場合、リストに変換してしまえばOK 
+# aimyon = list(aimyon)
+# print(aimyon)
+
+# #変更後にタプルに戻したかったら
+# aimyon = tuple(aimyon)
+# print(aimyon)
+
+
+
+# タプルをアンパックする
 aimyon = "西宮市", 27, 161
-print(aimyon)
 
-#タプルの各要素はインデックスでアクセスできる
-print(aimyon[0])
+#birthplace, age, height = aimyon
 
-#どうしてもタプルの要素を変更したくなった場合、リストに変換してしまえばOK 
-aimyon = list(aimyon)
-print(aimyon)
+#実際使うのは出身地の情報だけだった場合
+#アンパックに限らず、Pythonでは使う予定のない変数には慣習的に （アンダースコア）一文字が使われる。
+#あとから使わないよと言う意図を伝えることができる
+# birthplace, _, _ = aimyon
 
-#変更後にタプルに戻したかったら
-aimyon = tuple(aimyon)
-print(aimyon)
+# print(birthplace)
+# print(age)
+# print(height) 
+
+
+#連続した要素は *(アスタリスク）を付けた変数でまとめて取り出すことができる
+# birthplace, *ageHeight = aimyon
+# print(birthplace) #西宮市
+# print(ageHeight) #[27, 161] / タプルではなくてリストになる
+
+#出身地は使うけど、年齢も身長も後から使わない時
+birthplace, *_ = aimyon
+print(birthplace) #西宮市
+
