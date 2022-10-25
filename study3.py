@@ -240,3 +240,22 @@ aimyon = "西宮市", 27, 161
 birthplace, *_ = aimyon
 print(birthplace) #西宮市
 
+
+
+#シーケンス(連続している、順序を持つといった意味)
+scores = [10, 20, 30, 20, 40]
+tokyo = ("JPY", 36, 140)
+
+#文字列はひとつひとつの文字を要素として持つデータ型で、実はインデックスやスライスを使ってアクセスすることが出来る。
+name = "ohtani shohei"
+
+#文字列はタプルと同じでいったん生成したら中の要素を変更することができない -> append()やinsert()といったメソッドは使うことができない
+#name[0] = "d" #error
+#print(name[0])   
+
+#ohtaniをTaroに置換（ちかん）
+replaced_name = name.replace("ohtani","Taro") #非破壊的 
+print(replaced_name) #Taro shohei
+upper_string = name.upper() #非破壊的
+print(upper_string) #OHTANI SHOHEI
+
