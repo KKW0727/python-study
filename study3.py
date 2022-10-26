@@ -259,3 +259,21 @@ print(replaced_name) #Taro shohei
 upper_string = name.upper() #非破壊的
 print(upper_string) #OHTANI SHOHEI
 
+
+#文字列とリストを相互に変換
+
+#birthday = "2022-10-26"
+#-（ハイフン)を区切り文字として、この文字列を分解したリストにしてくれる
+#print(birthday.split("-")) #['2022', '10', '26']
+
+#ひとつの文字列に連結することもできる
+#birthday = ["2022", "11", "26"]
+#print("-".join(birthday)) #2022-11-26
+
+
+#リストの中身が文字列ではなくて数値だった場合
+#join() に渡すリストは文字列から構成されている必要がある
+birthday = [2022, 10, 26]
+#string関数を使って文字列に変換する
+print("-".join([str(n) for n in birthday])) #2022-10-26
+
