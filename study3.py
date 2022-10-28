@@ -277,3 +277,27 @@ birthday = [2022, 10, 26]
 #string関数を使って文字列に変換する
 print("-".join([str(n) for n in birthday])) #2022-10-26
 
+
+
+#辞書(データ型)
+#リストにキーを追加して拡張したデータ型
+#各要素へのアクセスにはキーを使うから、インデックスを使うことはできない
+scores = [62, 91, 84]
+
+scores = {"math": 62, "english": 91, "physics": 84}
+
+#個々の要素にアクセス
+scores["math"] = 100
+
+#要素を追加
+scores["japanese"] = 70
+
+#要素を削除
+#del scores["english"]
+
+#削除した要素の値をあとから使いたい場合
+popped_value = scores.pop("english")
+
+# print(scores["english"])
+print(popped_value)
+print(scores)
