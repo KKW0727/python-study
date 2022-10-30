@@ -301,3 +301,26 @@ popped_value = scores.pop("english")
 # print(scores["english"])
 print(popped_value)
 print(scores)
+
+
+
+#辞書とループを組み合わせる
+scores = {"math": 75, "english": 80, "physics": 93}
+
+for key in scores.keys():
+    print(key) #math english physics
+
+for value in scores.values():
+     print(value) #75 80 93
+     
+    
+# for item in scores.items():
+#     #print(item) #('math', 75) ('english', 80) ('physics', 93)
+#     #タプルで返してくれる
+#     #タプルのアンパックを使って変換する
+#     key, value = item
+#     print(f"{key:8} {value:3}")
+
+#直接、アンパックする
+for key, value in scores.items():
+    print(f"{key:8} {value:3}")
