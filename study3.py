@@ -324,3 +324,28 @@ for value in scores.values():
 #直接、アンパックする
 for key, value in scores.items():
     print(f"{key:8} {value:3}")
+
+
+
+#集合
+#重複を許さない(重複要素は無視されて表示される)、順序が保持されない(実行する度順序が変わる)という二つの特徴がある
+#リストやタプルと違って、インデックスを使って個々の要素にアクセスすることはできない
+teams = {"hanshin", "orix", "yomiuri", "yakult"} 
+
+#要素を追加
+teams.add("softbank")
+
+#要素を削除
+teams.remove("yomiuri")
+
+print(len(teams)) #重複を省いた要素の数
+print("hanshin" in teams) #True / 真偽値を返す
+
+#集合型はリストと同じく、中の要素を変更できるデータ型
+#タプルのように変更できないデータ型に変換することもできる。
+#frozensetという関数を使う
+
+frozen_teams = frozenset(teams)
+
+print(frozen_teams)
+print(teams)
