@@ -349,3 +349,28 @@ frozen_teams = frozenset(teams)
 
 print(frozen_teams)
 print(teams)
+
+
+
+# 集合の便利な演算
+#このリストから重複している人を省いて芸能人の数を知りたかった時
+#その場合、リストだとこれらを合体させたあとに、ひとつひとつの要素を調べて、重複していたら削除するという面倒な処理を書く必要があるが、集合型を使えば簡単に処理できる！
+
+actors = ["takahashi", "nakamura", "masaki", "gen"]
+singers = ["aimyon", "higedan", "gen", "masaki"]
+
+#集合型に変換
+actors = set(actors)
+singers = set(singers)
+
+#どちらかひとつだけに含まれる要素の集合を作る
+#print(actors | singers) #和集合と呼ぶ
+#{'higedan', 'nakamura', 'masaki', 'aimyon', 'gen', 'takahashi'}
+
+#どちらにも含まれている要素の集合を作る(重複要素の集合を作る)
+print(actors & singers) #積集合
+#{'gen', 'masaki'}
+
+#俳優としてだけ活躍している人を抽出したい場合
+print(actors - singers) #差集合
+#{'nakamura', 'takahashi'}
