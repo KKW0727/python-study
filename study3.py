@@ -416,3 +416,33 @@ print(nums) #[200, 20, 30]
 #num2に元の値を保持していてもらいたかった場合
 #copyメソッドを使う
 nums2 = nums.copy()
+
+
+
+#リストから辞書を作くる
+keys = ["korean", "english", "japanese"]
+values = [70, 95, 97]
+
+#それぞれをこの順序でペアにした辞書を作りたい場合
+#zip関数を使う
+#タプルで要素に持つリストのような特殊なデータ構造を作ってくれる
+#zip(keys, values)
+
+#これらをもとに辞書を作りたいから空の辞書を作る
+scores = {}
+
+# for item in zip(keys, values):
+#     print(item)
+#     key, value = item #アンパック
+#     #scores["korean"] = 70
+#     scores[key] = value
+
+#forをもっとスッキリと書く
+#forの時点でアンパック
+# for key,value in zip(keys, values):
+#     scores[key] = value
+     
+#辞書の内包表記を使う
+scores = {key: value for key,value in zip(keys, values)}
+     
+print(scores)
